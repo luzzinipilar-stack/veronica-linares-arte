@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Verónica Linares Arte | Pintora Argentina | Óleos y Acrílicos</title>
+<meta name="description" content="Verónica Linares, artista argentina. Óleos y acrílicos con alma, humor y color. Galería, muestras, cuadros a medida y tienda online. Envíos a todo el país.">
+<meta property="og:title" content="Verónica Linares Arte">
+<meta property="og:description" content="Arte con alma argentina. Cuadros originales, a medida y merch.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Verónica Linares","jobTitle":"Artista Visual","description":"Pintora argentina especializada en óleos y acrílicos","sameAs":["https://www.instagram.com/veronicalinares.arte/"]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0e0e0e;--white:#ffffff;--off:#f7f5f0;
+  --yellow:#f2c32a;--soft:#888;--border:#e5e5e5;
+  --serif:'Georgia',serif;--sans:'Helvetica Neue',Arial,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--white);color:var(--ink);overflow-x:hidden;line-height:1.6}
+
+/* TICKER */
+.ticker-wrap{background:var(--ink);overflow:hidden;white-space:nowrap;padding:0.55rem 0}
+.ticker-inner{display:inline-block;animation:tick 30s linear infinite}
+.ticker-inner span{padding:0 2.5rem;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.8)}
+.ticker-inner span b{color:#fff;font-weight:600}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-i{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;height:58px;gap:1rem}
+.nav-logo{font-family:var(--serif);font-size:0.95rem;letter-spacing:0.04em;color:var(--ink);text-decoration:none;white-space:nowrap;flex-shrink:0}
+.nav-logo b{font-weight:700}
+.nav-links{display:flex;gap:0;list-style:none;flex-wrap:nowrap}
+.nav-links a{text-decoration:none;color:var(--ink);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;transition:opacity .2s;padding:0 0.9rem;white-space:nowrap}
+.nav-links a:hover{opacity:0.4}
+.nav-actions{display:flex;align-items:center;gap:1rem;flex-shrink:0}
+.cart-btn{display:flex;align-items:center;gap:0.4rem;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;position:relative;background:none;border:none;color:var(--ink);white-space:nowrap;padding:0}
+.cart-badge{background:var(--ink);color:#fff;font-size:0.6rem;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;position:absolute;top:-5px;right:-7px}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;flex-shrink:0}
+.ham span{width:22px;height:1.5px;background:var(--ink);display:block;transition:all .3s}
+.mob{display:none;position:fixed;inset:0;background:var(--white);z-index:200;flex-direction:column;align-items:flex-start;justify-content:center;padding:4rem 3rem;gap:1.8rem}
+.mob.open{display:flex}
+.mob a{font-size:1.8rem;text-decoration:none;color:var(--ink);font-family:var(--serif);line-height:1.1}
+.mob-x{position:absolute;top:1.2rem;right:2rem;font-size:1.5rem;background:none;border:none;cursor:pointer;color:var(--ink)}
+
+/* HERO */
+#hero{min-height:100svh;display:grid;grid-template-rows:1fr auto;background:var(--ink);position:relative;overflow:hidden}
+.hero-mosaic{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);opacity:0.25;pointer-events:none}
+.hm{background-size:cover;background-position:center;filter:saturate(0.6) brightness(0.65)}
+.hero-body{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8rem 5vw 4rem;max-width:1200px;margin:0 auto;width:100%}
+.hero-tag{display:inline-block;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);padding:0.3rem 1rem;border-radius:30px;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1.8rem;animation:fu .8s both;width:fit-content}
+.hero-h1{font-family:var(--serif);font-size:clamp(3.5rem,9vw,8.5rem);color:#fff;line-height:0.9;letter-spacing:-0.02em;animation:fu .8s .12s both}
+.hero-h1 em{color:var(--yellow);font-style:normal;display:block}
+.hero-line{font-size:clamp(1rem,2vw,1.3rem);color:rgba(255,255,255,0.6);margin:1.8rem 0 2.5rem;max-width:540px;line-height:1.65;animation:fu .8s .24s both}
+.hero-line strong{color:#fff}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:fu .8s .36s both}
+.btn{display:inline-block;padding:0.85rem 2.2rem;text-decoration:none;font-size:0.76rem;letter-spacing:0.12em;text-transform:uppercase;border-radius:2px;transition:all .25s;border:1.5px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn-w{background:#fff;color:var(--ink);border-color:#fff}.btn-w:hover{background:var(--yellow);border-color:var(--yellow)}
+.btn-g{border-color:rgba(255,255,255,0.4);color:#fff}.btn-g:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
+.btn-d{background:var(--ink);color:#fff;border-color:var(--ink)}.btn-d:hover{background:#333;border-color:#333}
+.btn-o{border-color:var(--ink);color:var(--ink)}.btn-o:hover{background:var(--ink);color:#fff}
+.btn-y{background:var(--yellow);color:var(--ink);border-color:var(--yellow);font-weight:600}.btn-y:hover{background:#e0b730;border-color:#e0b730}
+.hero-foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;padding:2rem 5vw;border-top:1px solid rgba(255,255,255,0.1)}
+.hero-scroll{color:rgba(255,255,255,0.35);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;display:flex;align-items:center;gap:0.75rem}
+.scroll-ln{width:40px;height:1px;background:rgba(255,255,255,0.25)}
+.hero-num{text-align:right;color:rgba(255,255,255,0.45);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase}
+.hero-num b{display:block;font-size:1.5rem;color:#fff;font-family:var(--serif);letter-spacing:-0.02em;font-weight:400;line-height:1}
+
+/* YELLOW TICKER */
+.ytick{background:var(--yellow);overflow:hidden;white-space:nowrap;padding:0.65rem 0}
+.ytick .ticker-inner span{color:var(--ink);font-size:0.67rem}
+
+/* GALLERY CAROUSEL */
+#galeria{padding:6rem 0 5rem;background:var(--off)}
+.sec-h{max-width:1200px;margin:0 auto;padding:0 5vw 3rem;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem}
+.sec-lbl{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--soft);margin-bottom:0.4rem}
+.sec-t{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.1;font-weight:400}
+.sec-a{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;white-space:nowrap;transition:opacity .2s}.sec-a:hover{opacity:0.4}
+.cwrap{overflow:hidden;position:relative}
+.cwrap::before,.cwrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.cwrap::before{left:0;background:linear-gradient(to right,var(--off),transparent)}
+.cwrap::after{right:0;background:linear-gradient(to left,var(--off),transparent)}
+.ctrack{display:flex;gap:1.5rem;padding:0.5rem 5vw;animation:sl 45s linear infinite;width:max-content}
+.ctrack:hover{animation-play-state:paused}
+.cc{width:280px;flex-shrink:0;background:var(--white);border:1px solid var(--border);overflow:hidden;transition:transform .3s;cursor:pointer}
+.cc:hover{transform:translateY(-5px)}
+.cc-img{width:100%;aspect-ratio:1;overflow:hidden;background:#ddd}
+.cc-img img{width:100%;height:100%;object-fit:cover;display:block}
+.cc-body{padding:1rem 1.2rem;border-top:1px solid var(--border)}
+.cc-t{font-family:var(--serif);font-size:0.95rem;margin-bottom:0.15rem}
+.cc-m{font-size:0.72rem;color:var(--soft)}
+@keyframes sl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SOBRE */
+#sobre{max-width:1200px;margin:0 auto;padding:8rem 5vw;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.aimg{position:relative}
+.aimg-inner{width:100%;aspect-ratio:4/5;overflow:hidden;background:#e8d5a3}
+.aimg-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.aqt{position:absolute;bottom:-1.5rem;left:-1.5rem;background:var(--ink);color:var(--yellow);font-family:var(--serif);font-size:1.4rem;font-style:italic;line-height:1.3;padding:1.3rem 1.8rem;max-width:260px;z-index:2}
+.aey{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--soft);margin-bottom:1.1rem}
+.ah2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);line-height:1.05;font-weight:400;margin-bottom:1.8rem}
+.ah2 mark{background:var(--yellow);font-style:normal;padding:0 4px}
+.ap{font-size:1rem;line-height:1.8;color:#444;margin-bottom:1.1rem}
+.ap strong{color:var(--ink)}
+.abtns{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+
+/* ENCARGOS */
+#encargo{background:var(--ink);color:#fff;padding:7rem 5vw}
+.enc-i{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.enc-lbl{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.5rem}
+.enc-t{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);color:#fff;font-weight:400;line-height:1.1;margin-bottom:1.4rem}
+.enc-p{color:rgba(255,255,255,0.6);line-height:1.8;font-size:0.98rem;margin-bottom:1rem}
+.enc-p strong{color:#fff}
+.enc-ex{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.exc{border:1px solid rgba(255,255,255,0.1);padding:1.3rem;transition:border-color .2s}
+.exc:hover{border-color:var(--yellow)}
+.exc-ic{font-size:1.6rem;margin-bottom:0.6rem}
+.exc-t{font-family:var(--serif);font-size:0.95rem;color:#fff;margin-bottom:0.3rem}
+.exc-d{font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.5}
+
+/* OBRAS */
+#obras{padding:7rem 5vw;background:var(--off)}
+.frow{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:3rem}
+.fb{padding:0.4rem 1.1rem;border:1px solid var(--border);background:var(--white);color:var(--ink);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:30px;transition:all .2s;font-family:var(--sans)}
+.fb.active,.fb:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.msn{columns:3;column-gap:1rem}
+.mi{break-inside:avoid;margin-bottom:1rem;cursor:pointer;overflow:hidden;position:relative;background:var(--white);border:1px solid var(--border)}
+.mi-img{width:100%;display:block;aspect-ratio:var(--r,1);object-fit:cover;background:var(--c,#ccc);transition:transform .4s}
+.mi-ph{aspect-ratio:var(--r,1);display:flex;align-items:flex-end;padding:1rem;background:var(--c,#ccc)}
+.mi-ph span{font-size:0.75rem;color:rgba(255,255,255,0.8);font-family:var(--serif)}
+.mi-ov{position:absolute;inset:0;background:rgba(0,0,0,0);display:flex;align-items:center;justify-content:center;transition:all .3s;opacity:0}
+.mi:hover .mi-ov{background:rgba(0,0,0,0.5);opacity:1}
+.mi:hover .mi-img,.mi:hover .mi-ph{transform:scale(1.03)}
+.mi-ov span{color:#fff;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase}
+
+/* EXPO */
+#exposiciones{max-width:900px;margin:0 auto;padding:7rem 5vw}
+.exl{position:relative;margin-top:3rem}
+.exl::before{content:'';position:absolute;left:95px;top:0;bottom:0;width:1px;background:var(--border)}
+.exi{display:grid;grid-template-columns:95px 1fr;gap:2rem;margin-bottom:3rem;position:relative}
+.exi::before{content:'';position:absolute;left:90px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink)}
+.exd{font-size:0.7rem;color:var(--soft);text-align:right;padding-top:4px;line-height:1.6}
+.exd strong{display:block;font-size:0.95rem;color:var(--ink);font-family:var(--serif);font-weight:400}
+.exn{font-family:var(--serif);font-size:1.2rem;font-weight:400;margin-bottom:0.25rem}
+.exv{font-size:0.78rem;color:var(--soft);margin-bottom:0.4rem}
+.exdesc{font-size:0.88rem;color:#555;line-height:1.65}
+.bdg{display:inline-block;padding:0.18rem 0.75rem;border-radius:20px;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem;font-weight:600}
+.b-up{background:#ecfdf5;color:#065f46}
+.b-past{background:#f4f4f4;color:#888}
+
+/* TIENDA */
+#tienda{padding:7rem 5vw;background:var(--white)}
+.ship-note{max-width:1200px;margin:0 auto 3rem;padding:1rem 1.4rem;background:var(--off);border-left:3px solid var(--yellow);font-size:0.82rem;color:#555}
+.ship-note strong{color:var(--ink)}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1.5rem;max-width:1200px;margin:0 auto}
+.si{border:1px solid var(--border);background:var(--white);transition:box-shadow .3s}
+.si:hover{box-shadow:0 8px 40px rgba(0,0,0,0.09)}
+.si-img{aspect-ratio:1;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;background:#f0f0f0}
+.si-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.si:hover .si-img img{transform:scale(1.05)}
+.si-tag{position:absolute;top:10px;left:10px;background:var(--yellow);color:var(--ink);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.22rem 0.6rem;font-weight:700}
+.si-b{padding:1.1rem 1.3rem;border-top:1px solid var(--border)}
+.si-n{font-family:var(--serif);font-size:0.98rem;margin-bottom:0.2rem}
+.si-s{font-size:0.72rem;color:var(--soft);margin-bottom:0.9rem}
+.si-f{display:flex;align-items:center;justify-content:space-between}
+.si-p{font-size:0.98rem;font-weight:700;color:var(--ink)}
+.si-ps{font-size:0.68rem;color:var(--soft);margin-top:1px}
+.ab{background:var(--ink);color:#fff;border:none;padding:0.48rem 1.1rem;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background .2s;font-family:var(--sans)}
+.ab:hover{background:#333}
+.mp-note{max-width:1200px;margin:2rem auto 0;padding:1.1rem 1.4rem;border:1px solid var(--border);font-size:0.8rem;color:#555;display:flex;align-items:center;gap:0.75rem}
+.mpl{background:#009ee3;color:#fff;font-size:0.62rem;font-weight:700;padding:0.22rem 0.55rem;border-radius:3px;white-space:nowrap}
+
+/* CONTACTO */
+#contacto{background:var(--ink);padding:7rem 5vw}
+.ct-i{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.ct-lbl{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.5rem}
+.ct-t{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);color:#fff;font-weight:400;line-height:1.1;margin-bottom:1.2rem}
+.ct-p{color:rgba(255,255,255,0.55);font-size:0.98rem;line-height:1.8;margin-bottom:1.5rem}
+.ct-d{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:1.5rem}
+.cd{font-size:0.82rem;color:rgba(255,255,255,0.5)}
+.cd a{color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s}.cd a:hover{color:var(--yellow)}
+.cform{display:flex;flex-direction:column;gap:0.9rem}
+.cform input,.cform textarea,.cform select{width:100%;padding:0.85rem 1.1rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;font-size:0.88rem;font-family:var(--sans);transition:border .2s}
+.cform input::placeholder,.cform textarea::placeholder{color:rgba(255,255,255,0.3)}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--yellow)}
+.cform textarea{min-height:130px;resize:vertical}
+.cform-r{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem}
+.csb{padding:0.95rem 2rem;background:var(--yellow);color:var(--ink);border:none;font-size:0.76rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background .2s;font-family:var(--sans)}
+.csb:hover{background:#e0b730}
+
+/* FOOTER */
+footer{background:#000;color:rgba(255,255,255,0.3);padding:3rem 5vw}
+.ft-i{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.ft-brand{font-family:var(--serif);font-size:1.1rem;color:rgba(255,255,255,0.75);margin-bottom:0.6rem}
+.ft-brand b{color:#fff}
+.ft-tag{font-size:0.75rem;color:rgba(255,255,255,0.28);line-height:1.6}
+.ft-col-t{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.9rem;font-weight:600}
+.ft-col a{display:block;font-size:0.78rem;color:rgba(255,255,255,0.32);text-decoration:none;margin-bottom:0.5rem;transition:color .2s}.ft-col a:hover{color:var(--yellow)}
+.ft-bot{max-width:1200px;margin:2rem auto 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;font-size:0.7rem;color:rgba(255,255,255,0.22);flex-wrap:wrap;gap:0.5rem}
+
+/* LIGHTBOX */
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.94);z-index:500;align-items:center;justify-content:center;padding:2rem}
+#lb.open{display:flex}
+#lb-x{position:absolute;top:1.5rem;right:2rem;color:#fff;font-size:1.8rem;background:none;border:none;cursor:pointer;opacity:0.6;line-height:1}
+#lb-x:hover{opacity:1}
+#lb-img{max-width:88vw;max-height:88vh;object-fit:contain}
+#lb-cap{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.45);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap}
+
+/* CART */
+.co{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:299}
+.co.open{display:block}
+#cd{position:fixed;right:-380px;top:0;bottom:0;width:360px;background:var(--white);z-index:300;box-shadow:-8px 0 40px rgba(0,0,0,0.12);transition:right .35s;padding:2rem;overflow-y:auto;display:flex;flex-direction:column;gap:1.4rem}
+#cd.open{right:0}
+.cd-h{display:flex;justify-content:space-between;align-items:center}
+.cd-h h3{font-family:var(--serif);font-size:1.2rem;font-weight:400}
+.cd-x{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--ink)}
+.c-items{flex:1;display:flex;flex-direction:column;gap:0.9rem}
+.c-empty{color:var(--soft);font-size:0.88rem;text-align:center;padding:2rem 0}
+.cl{display:flex;justify-content:space-between;align-items:center;padding-bottom:0.9rem;border-bottom:1px solid var(--border)}
+.cl-n{font-size:0.85rem;font-family:var(--serif)}
+.cl-p{font-size:0.82rem;font-weight:600}
+.cl-rm{background:none;border:none;color:var(--soft);cursor:pointer;font-size:0.88rem;margin-left:0.4rem}
+.c-tot{border-top:2px solid var(--ink);padding-top:1.1rem;display:flex;justify-content:space-between;font-size:0.98rem;font-weight:700}
+.chk{background:var(--ink);color:#fff;padding:0.95rem;text-align:center;font-size:0.76rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;border:none;font-family:var(--sans);transition:background .2s;width:100%;margin-top:1rem}
+.chk:hover{background:#333}
+
+/* TOAST */
+#toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:0.85rem 1.6rem;font-size:0.8rem;letter-spacing:0.08em;z-index:400;opacity:0;transition:all .3s;border-left:3px solid var(--yellow);white-space:nowrap}
+#toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ANIMATIONS */
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.vi{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  #sobre{grid-template-columns:1fr;gap:3rem}
+  .enc-i{grid-template-columns:1fr;gap:3rem}
+  .ct-i{grid-template-columns:1fr;gap:3rem}
+  .ft-i{grid-template-columns:1fr 1fr}
+  .msn{columns:2}
+  .hero-body{padding:6rem 5vw 3rem}
+  .enc-ex{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  /* Nav */
+  .nav-links{display:none}
+  .ham{display:flex}
+  .nav-i{padding:0 1.2rem}
+  /* Hero */
+  .hero-body{padding:5rem 1.5rem 2.5rem}
+  .hero-h1{font-size:clamp(3rem,14vw,5rem)}
+  .hero-foot{padding:1.2rem 1.5rem;flex-direction:column;gap:0.5rem;align-items:flex-start}
+  .hero-num{text-align:left}
+  .hero-btns{flex-direction:column;width:100%}
+  .hero-btns .btn{text-align:center;width:100%}
+  /* Sections */
+  .sec-h{flex-direction:column;gap:0.75rem;padding:0 0 2rem}
+  #galeria{padding:4rem 0 3rem}
+  /* About */
+  #sobre{padding:5rem 1.5rem;gap:2.5rem}
+  .aimg{margin-bottom:2rem}
+  .aqt{left:0;bottom:-1rem;font-size:1.1rem;padding:1rem 1.2rem;max-width:220px}
+  /* Encargo */
+  #encargo{padding:5rem 1.5rem}
+  .enc-ex{grid-template-columns:1fr}
+  /* Obras */
+  #obras{padding:5rem 1.5rem}
+  .msn{columns:1}
+  .frow{gap:0.4rem}
+  .fb{font-size:0.65rem;padding:0.35rem 0.9rem}
+  /* Expo */
+  #exposiciones{padding:5rem 1.5rem}
+  .exl::before{left:65px}
+  .exi{grid-template-columns:65px 1fr;gap:1rem}
+  .exi::before{left:60px}
+  /* Tienda */
+  #tienda{padding:5rem 1.5rem}
+  .sgrid{grid-template-columns:1fr 1fr;gap:1rem}
+  /* Contacto */
+  #contacto{padding:5rem 1.5rem}
+  .cform-r{grid-template-columns:1fr}
+  /* Footer */
+  .ft-i{grid-template-columns:1fr;gap:2rem}
+  .ft-bot{flex-direction:column;gap:0.2rem}
+  /* Cart */
+  #cd{width:100%;right:-100%}
+}
+@media(max-width:420px){
+  .sgrid{grid-template-columns:1fr}
+  .hero-tag{font-size:0.6rem}
+  .hero-h1{font-size:clamp(2.8rem,16vw,4.5rem)}
+  .hero-line{font-size:0.92rem}
+  .btn{padding:0.75rem 1.5rem;font-size:0.72rem}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER TOP -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>📦 Envíos a todo el país vía <b>Correo Argentino</b></span>
+    <span>🎨 Cuadros a medida · <b>Consultá por DM</b></span>
+    <span>💳 Pagá con <b>MercadoPago</b> · Hasta 12 cuotas</span>
+    <span>🖼️ Obras originales en óleo y acrílico</span>
+    <span>📦 Envíos a todo el país vía <b>Correo Argentino</b></span>
+    <span>🎨 Cuadros a medida · <b>Consultá por DM</b></span>
+    <span>💳 Pagá con <b>MercadoPago</b> · Hasta 12 cuotas</span>
+    <span>🖼️ Obras originales en óleo y acrílico</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-i">
+    <a href="#" class="nav-logo">Verónica <b>Linares</b>.Arte</a>
+    <ul class="nav-links">
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#sobre">Artista</a></li>
+      <li><a href="#encargo">A medida</a></li>
+      <li><a href="#exposiciones">Muestras</a></li>
+      <li><a href="#tienda">Tienda</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" onclick="toggleCart()">🛒 <span class="cart-badge" id="cb">0</span></button>
+      <button class="ham" onclick="document.querySelector('.mob').classList.add('open')" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mob">
+  <button class="mob-x" onclick="document.querySelector('.mob').classList.remove('open')">✕</button>
+  <a href="#galeria" onclick="document.querySelector('.mob').classList.remove('open')">Galería</a>
+  <a href="#sobre" onclick="document.querySelector('.mob').classList.remove('open')">Artista</a>
+  <a href="#encargo" onclick="document.querySelector('.mob').classList.remove('open')">A medida</a>
+  <a href="#exposiciones" onclick="document.querySelector('.mob').classList.remove('open')">Muestras</a>
+  <a href="#tienda" onclick="document.querySelector('.mob').classList.remove('open')">Tienda</a>
+  <a href="#contacto" onclick="document.querySelector('.mob').classList.remove('open')">Contacto</a>
+</div>
+
+<!-- HERO — uses real painting as mosaic bg -->
+<section id="hero">
+  <div class="hero-mosaic" id="heroMosaic">
+    <!-- JS fills these with the real painting images -->
+  </div>
+  <div class="hero-body">
+    <span class="hero-tag">Artista · Made in Argentina</span>
+    <h1 class="hero-h1">Verónica<em>Linares</em></h1>
+    <p class="hero-line">El humor como pincel. La vida cotidiana como lienzo.<br><strong>Óleo y acrílico con identidad argentina.</strong></p>
+    <div class="hero-btns">
+      <a href="#galeria" class="btn btn-w">Ver obras</a>
+      <a href="#tienda" class="btn btn-g">Ir a la tienda</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="hero-scroll"><div class="scroll-ln"></div>Scroll</div>
+    <div class="hero-num"><b>+683</b>obras publicadas</div>
+  </div>
+</section>
+
+<!-- YELLOW TICKER -->
+<div class="ytick">
+  <div class="ticker-inner">
+    <span>✦ Óleo y Acrílico</span><span>✦ Arte Made in Argentina</span><span>✦ Cuadros Originales</span><span>✦ Merch con Arte</span><span>✦ Cuadros a Medida</span><span>✦ Envíos Todo el País</span>
+    <span>✦ Óleo y Acrílico</span><span>✦ Arte Made in Argentina</span><span>✦ Cuadros Originales</span><span>✦ Merch con Arte</span><span>✦ Cuadros a Medida</span><span>✦ Envíos Todo el País</span>
+  </div>
+</div>
+
+<!-- CAROUSEL con imágenes reales -->
+<section id="galeria">
+  <div class="sec-h rv">
+    <div><p class="sec-lbl">Galería en movimiento</p><h2 class="sec-t">Obras recientes</h2></div>
+    <a href="#obras" class="sec-a">Ver todas →</a>
+  </div>
+  <div class="cwrap">
+    <div class="ctrack" id="ctrack">
+      <!-- JS genera las cards con imágenes reales -->
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE LA ARTISTA -->
+<section id="sobre">
+  <div class="aimg rv">
+    <div class="aimg-inner" id="aboutImgWrap">
+      <!-- imagen real: Vero pintando (img16) o con cuadro (img3) -->
+      <div style="width:100%;height:100%;background:#c75b39;display:flex;align-items:center;justify-content:center;font-size:4rem">👩🏽‍🎨</div>
+    </div>
+    <div class="aqt">"El humor<br>es mi pincel"</div>
+  </div>
+  <div class="rv">
+    <p class="aey">La artista</p>
+    <h2 class="ah2">Made in Argentina.<br><mark>Con mucho humor.</mark></h2>
+    <p class="ap">Crecí mirando pintar a mi padre. Las telas, los pinceles, el olor a óleo —todo eso siempre estuvo cerca, como algo que algún día iba a necesitar.</p>
+    <p class="ap"><strong>No fue hasta mis 40 años que tomé el pincel por primera vez, y desde ese día no paré.</strong> Pinto lo que me hace reír, lo que me emociona, lo que me define: el asado del domingo, la mina que viaja sola con su perro, la noche del Mundial, el sillón perfecto de un martes.</p>
+    <p class="ap">El humor es mi manera de ver el mundo, y se nota en cada obra. <strong>Arte con identidad, con historia, con alma argentina.</strong></p>
+    <div class="abtns">
+      <a href="#obras" class="btn btn-d">Ver obras</a>
+      <a href="https://www.instagram.com/veronicalinares.arte/" target="_blank" class="btn btn-o">Instagram ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- CUADROS A MEDIDA -->
+<section id="encargo">
+  <div class="enc-i">
+    <div class="rv">
+      <p class="enc-lbl">Servicio especial</p>
+      <h2 class="enc-t">Cuadros a tu medida</h2>
+      <p class="enc-p">¿Tenés un lugar que te define, una pasión que te mueve, una historia que querés colgar en una pared? <strong>Hago cuadros personalizados para personas, negocios y espacios.</strong></p>
+      <p class="enc-p">Me contás tu idea —el lugar, el ambiente, los personajes— y lo convierto en una obra original. No hay dos iguales.</p>
+      <p class="enc-p">Ideal para <strong>bares, restaurantes, hoteles, estudios y hogares</strong> con identidad propia.</p>
+      <a href="#contacto" class="btn btn-y" style="display:inline-block;margin-top:1.5rem">Consultá por tu cuadro →</a>
+    </div>
+    <div class="enc-ex rv">
+      <div class="exc"><div class="exc-ic">🎰</div><p class="exc-t">Casinos y juego</p><p class="exc-d">Ambientes nocturnos, fichas, ruletas y esa tensión única del azar pintada con color y humor.</p></div>
+      <div class="exc"><div class="exc-ic">🍺</div><p class="exc-t">Bares y bodegones</p><p class="exc-d">Personajes de barrio, botellas que hablan, mesas con historia. El bar de siempre pero en lienzo.</p></div>
+      <div class="exc"><div class="exc-ic">✈️</div><p class="exc-t">Viajes y aventuras</p><p class="exc-d">Destinos soñados, la Vespa con las valijas, mapas de rutas. Tu historia hecha arte.</p></div>
+      <div class="exc"><div class="exc-ic">🏠</div><p class="exc-t">Tu hogar, tu historia</p><p class="exc-d">La familia, el barrio, las tradiciones. Un cuadro que cuente quiénes son.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OBRAS -->
+<section id="obras">
+  <div class="sec-h rv" style="padding:0 0 3rem">
+    <div><p class="sec-lbl">Portfolio</p><h2 class="sec-t">Obras originales</h2></div>
+  </div>
+  <div class="frow rv">
+    <button class="fb active" onclick="fw(this,'all')">Todas</button>
+    <button class="fb" onclick="fw(this,'viaje')">Viaje</button>
+    <button class="fb" onclick="fw(this,'cotidiano')">Cotidiano</button>
+    <button class="fb" onclick="fw(this,'argentina')">Argentina</button>
+    <button class="fb" onclick="fw(this,'personajes')">Personajes</button>
+  </div>
+  <div class="msn" id="mg"></div>
+</section>
+
+<!-- EXPOSICIONES -->
+<section id="exposiciones">
+  <div class="sec-h rv" style="padding:0 0 0">
+    <div><p class="sec-lbl">Muestras y exposiciones</p><h2 class="sec-t">En el mundo real</h2></div>
+  </div>
+  <div class="exl">
+    <div class="exi rv"><div class="exd"><strong>2025</strong>Mayo</div><div><span class="bdg b-up">Próxima</span><h3 class="exn">Muestra Espirituosa</h3><p class="exv">Sunderland Bar · Argentina</p><p class="exdesc">Cuadros que celebran el alma argentina: el vino, la amistad y los bares de barrio. Curaduría: Sebastián Pinciroli.</p></div></div>
+    <div class="exi rv"><div class="exd"><strong>2024</strong>Nov</div><div><span class="bdg b-past">Pasada</span><h3 class="exn">La Viajera — Itinerante</h3><p class="exv">Hotel City Center · Rosario</p><p class="exdesc">Presentación de la serie "La Viajera" junto al lanzamiento de valijas, termos y cuadernos con su arte.</p></div></div>
+    <div class="exi rv"><div class="exd"><strong>2024</strong>Mar</div><div><span class="bdg b-past">Pasada</span><h3 class="exn">Cotidiano Extraordinario</h3><p class="exv">Argentina</p><p class="exdesc">Escenas domésticas convertidas en lienzos: la siesta, la cocina, los viernes de Netflix.</p></div></div>
+    <div class="exi rv"><div class="exd"><strong>2022</strong>Dic</div><div><span class="bdg b-past">Pasada</span><h3 class="exn">Argentina Campeón</h3><p class="exv">Argentina</p><p class="exdesc">Serie sobre la histórica noche del Mundial 2022. La caravana, los festejos, el alma celeste y blanca.</p></div></div>
+  </div>
+</section>
+
+<!-- TIENDA -->
+<section id="tienda">
+  <div class="sec-h rv" style="padding:0 0 1rem">
+    <div><p class="sec-lbl">Tienda online</p><h2 class="sec-t">Llevate un pedacito</h2></div>
+  </div>
+  <div class="ship-note rv">📦 <strong>Envíos a todo el país</strong> vía Correo Argentino · Precios en pesos argentinos · Pagá con MercadoPago hasta 12 cuotas</div>
+  <div class="sgrid" id="sg"></div>
+  <div class="mp-note rv">
+    <span class="mpl">MP</span>
+    Pagá de forma segura con <strong>MercadoPago</strong> — tarjetas de crédito, débito y hasta 12 cuotas. Envíos coordinados vía <strong>Correo Argentino</strong> con seguimiento.
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="ct-i">
+    <div class="rv">
+      <p class="ct-lbl">Escribime</p>
+      <h2 class="ct-t">¿Querés una obra,<br>un encargo o simplemente<br>decirme algo lindo?</h2>
+      <p class="ct-p">Respondoo a la brevedad. También encontrame en Instagram como <strong style="color:#fff">@veronicalinares.arte</strong>.</p>
+      <div class="ct-d">
+        <div class="cd">📍 Argentina</div>
+        <div class="cd">📸 <a href="https://www.instagram.com/veronicalinares.arte/" target="_blank">@veronicalinares.arte</a></div>
+        <div class="cd">📦 Envíos a todo el país · Correo Argentino</div>
+        <div class="cd">💳 MercadoPago · hasta 12 cuotas</div>
+      </div>
+    </div>
+    <div class="rv">
+      <form class="cform" onsubmit="handleForm(event)">
+        <div class="cform-r">
+          <input type="text" placeholder="Tu nombre" required>
+          <input type="email" placeholder="Tu email" required>
+        </div>
+        <select style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.55);padding:0.85rem 1.1rem;font-size:0.88rem;font-family:var(--sans);width:100%">
+          <option value="">¿En qué te puedo ayudar?</option>
+          <option>Obra original disponible</option>
+          <option>Encargo a medida</option>
+          <option>Merch y tienda</option>
+          <option>Muestra o colaboración</option>
+          <option>Otro</option>
+        </select>
+        <textarea placeholder="Contame tu idea, tu lugar, tu historia..."></textarea>
+        <button type="submit" class="csb" id="sbtn">Enviar mensaje →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-i">
+    <div>
+      <p class="ft-brand">Verónica <b>Linares</b>.Arte</p>
+      <p class="ft-tag">Pintora argentina · Óleos y acrílicos<br>Cuadros originales, a medida y merch con arte.</p>
+    </div>
+    <div class="ft-col"><p class="ft-col-t">Navegar</p><a href="#galeria">Galería</a><a href="#sobre">La artista</a><a href="#encargo">A medida</a><a href="#exposiciones">Muestras</a></div>
+    <div class="ft-col"><p class="ft-col-t">Tienda</p><a href="#tienda">Valijas carry-on</a><a href="#tienda">Tazas</a><a href="#tienda">Termos</a><a href="#tienda">Cuadernos</a></div>
+    <div class="ft-col"><p class="ft-col-t">Contacto</p><a href="https://www.instagram.com/veronicalinares.arte/" target="_blank">Instagram ↗</a><a href="#contacto">Formulario</a><a href="#tienda">MercadoPago</a></div>
+  </div>
+  <div class="ft-bot">
+    <span>© 2025 Verónica Linares Arte · Argentina</span>
+    <span>Envíos vía Correo Argentino · Pagos via MercadoPago</span>
+    <span>Hecho con ❤️</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lb" onclick="closeLb()">
+  <button id="lb-x" onclick="closeLb()">✕</button>
+  <img id="lb-img" src="" alt="Obra de Verónica Linares" style="max-width:88vw;max-height:88vh;object-fit:contain">
+  <p id="lb-cap"></p>
+</div>
+
+<!-- CART DRAWER -->
+<div class="co" id="co" onclick="toggleCart()"></div>
+<div id="cd">
+  <div class="cd-h"><h3>Tu carrito</h3><button class="cd-x" onclick="toggleCart()">✕</button></div>
+  <div class="c-items" id="ci"><p class="c-empty">Tu carrito está vacío</p></div>
+  <div>
+    <div class="c-tot" id="ctot" style="display:none"><span>Total</span><span id="ctval">$0</span></div>
+    <button class="chk" onclick="checkout()">Pagar con MercadoPago →</button>
+    <p style="font-size:0.68rem;color:var(--soft);text-align:center;margin-top:0.6rem">Envíos a todo el país · Correo Argentino</p>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ── IMAGE DATA ──────────────────────────────────────────────
+// These are placeholder data-URIs representing each real photo.
+// To use real images: replace each `src` with the actual file path
+// e.g. src: 'images/laviajera.jpg'  when hosting the site.
+const imgs = {
+  vero_mundial:   'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%231a2e5e" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🇦🇷</text></svg>',
+  laviajera:      'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450"><rect fill="%232c5f8a" width="400" height="450"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🏍️</text></svg>',
+  siesta:         'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460"><rect fill="%234a7c59" width="400" height="460"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🛋️</text></svg>',
+  rosario:        'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280"><rect fill="%23c75b39" width="400" height="280"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🍽️</text></svg>',
+  muestra:        'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><rect fill="%236a4c93" width="400" height="500"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🍷</text></svg>',
+  pintando:       'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450"><rect fill="%23c8a820" width="400" height="450"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🎨</text></svg>',
+  // merch
+  termo:          'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%232c5f8a" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🫙</text></svg>',
+  tazas:          'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%23c75b39" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">☕</text></svg>',
+  valija_vespa:   'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%234a90d9" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🧳</text></svg>',
+  valija_netflix: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%236a4c93" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🧳</text></svg>',
+  cuaderno:       'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%23c8a820" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">📓</text></svg>',
+  vero_expo:      'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450"><rect fill="%232c5f8a" width="400" height="450"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">👩🏽‍🎨</text></svg>',
+};
+
+// ── HERO MOSAIC ──────────────────────────────────────────────
+const heroSrcs = [imgs.laviajera, imgs.vero_mundial, imgs.rosario, imgs.siesta, imgs.muestra, imgs.pintando, imgs.vero_mundial, imgs.laviajera];
+const mosaicEl = document.getElementById('heroMosaic');
+heroSrcs.forEach(src => {
+  const d = document.createElement('div');
+  d.className = 'hm';
+  d.style.backgroundImage = `url("${src}")`;
+  mosaicEl.appendChild(d);
+});
+
+// ── ABOUT IMAGE ──────────────────────────────────────────────
+document.getElementById('aboutImgWrap').innerHTML = `<img src="${imgs.pintando}" alt="Verónica Linares en su taller" style="width:100%;height:100%;object-fit:cover">`;
+
+// ── CAROUSEL ─────────────────────────────────────────────────
+const carouselData = [
+  {img: imgs.laviajera,   title: 'La Viajera', meta: 'Acrílico · 90×100cm'},
+  {img: imgs.vero_mundial,title: 'La Caravana', meta: 'Óleo · 120×100cm'},
+  {img: imgs.rosario,     title: 'El Asado en Rosario', meta: 'Acrílico · 180×90cm'},
+  {img: imgs.siesta,      title: 'Siesta', meta: 'Acrílico · 80×80cm'},
+  {img: imgs.muestra,     title: 'Espirituosa', meta: 'Óleo · 70×70cm'},
+  {img: imgs.pintando,    title: 'La Jardinera', meta: 'Acrílico · 100×100cm'},
+];
+const ct = document.getElementById('ctrack');
+[...carouselData, ...carouselData].forEach(d => {
+  ct.innerHTML += `<div class="cc" onclick="openLb('${d.img}','${d.title}')"><div class="cc-img"><img src="${d.img}" alt="${d.title}" loading="lazy"></div><div class="cc-body"><p class="cc-t">${d.title}</p><p class="cc-m">${d.meta}</p></div></div>`;
+});
+
+// ── MASONRY GRID ─────────────────────────────────────────────
+const obras = [
+  {img: imgs.laviajera,    title:'La Viajera — Vespa', cat:'viaje', r:'1.1'},
+  {img: imgs.vero_mundial, title:'La Caravana del Mundial', cat:'argentina', r:'1.3'},
+  {img: imgs.siesta,       title:'Siesta en el sillón', cat:'cotidiano', r:'0.88'},
+  {img: imgs.rosario,      title:'El Asado en Rosario', cat:'personajes', r:'1.4'},
+  {img: imgs.muestra,      title:'Muestra Espirituosa', cat:'cotidiano', r:'0.9'},
+  {img: imgs.pintando,     title:'La Jardinera', cat:'personajes', r:'1.15'},
+  {img: imgs.vero_mundial, title:'Argentina Campeón', cat:'argentina', r:'0.82'},
+  {img: imgs.vero_expo,    title:'La Viajera — Expo', cat:'viaje', r:'1.1'},
+  {img: imgs.laviajera,    title:'A Donde Ir', cat:'viaje', r:'1.0'},
+];
+const mg = document.getElementById('mg');
+obras.forEach(o => {
+  mg.innerHTML += `<div class="mi" data-cat="${o.cat}" onclick="openLb('${o.img}','${o.title}')"><img class="mi-img" src="${o.img}" alt="${o.title}" loading="lazy" style="--r:${o.r}"><div class="mi-ov"><span>Ver obra</span></div></div>`;
+});
+
+// ── SHOP ─────────────────────────────────────────────────────
+const prods = [
+  {img: imgs.valija_vespa,   tag:'Valija carry-on', name:'Valija "La Viajera"',   sub:'Carry-on · Arte impreso · Envío incluido', price:89990, q:'hasta 12 cuotas'},
+  {img: imgs.valija_netflix, tag:'Valija carry-on', name:'Valija "Netflix Night"', sub:'Carry-on · Arte impreso · Envío incluido', price:89990, q:'hasta 12 cuotas'},
+  {img: imgs.tazas,          tag:'Taza',            name:'Taza "La Viajera"',      sub:'Cerámica · 350ml · Apta lavavajillas',    price:14500, q:'en 1 pago'},
+  {img: imgs.tazas,          tag:'Taza',            name:'Taza "Siesta"',          sub:'Cerámica · 350ml · Edición limitada',     price:14500, q:'en 1 pago'},
+  {img: imgs.termo,          tag:'Termo',           name:'Termo "La Viajera"',     sub:'500ml · Acero inoxidable · Arte impreso', price:22900, q:'hasta 3 cuotas'},
+  {img: imgs.cuaderno,       tag:'Cuaderno',        name:'Cuaderno "La Viajera"',  sub:'A5 · Tapa dura · 120 hojas',             price:18500, q:'en 1 pago'},
+];
+const sg = document.getElementById('sg');
+prods.forEach(p => {
+  sg.innerHTML += `<div class="si rv"><div class="si-img"><img src="${p.img}" alt="${p.name}" loading="lazy"><span class="si-tag">${p.tag}</span></div><div class="si-b"><p class="si-n">${p.name}</p><p class="si-s">${p.sub}</p><div class="si-f"><div><p class="si-p">$${p.price.toLocaleString('es-AR')}</p><p class="si-ps">${p.q}</p></div><button class="ab" onclick="addToCart('${p.name}',${p.price})">Agregar</button></div></div></div>`;
+});
+
+// ── FILTER ───────────────────────────────────────────────────
+function fw(btn, cat) {
+  document.querySelectorAll('.fb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.mi').forEach(el => {
+    el.style.display = (cat === 'all' || el.dataset.cat === cat) ? 'block' : 'none';
+  });
+}
+
+// ── LIGHTBOX ─────────────────────────────────────────────────
+function openLb(src, title) {
+  document.getElementById('lb').classList.add('open');
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb-cap').textContent = title;
+}
+function closeLb() { document.getElementById('lb').classList.remove('open'); }
+
+// ── CART ─────────────────────────────────────────────────────
+let cart = [];
+function addToCart(name, price) {
+  const ex = cart.find(i => i.name === name);
+  if (ex) ex.qty++; else cart.push({name, price, qty: 1});
+  renderCart();
+  showToast('✓ ' + name + ' agregado');
+}
+function renderCart() {
+  const ci = document.getElementById('ci');
+  const badge = document.getElementById('cb');
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  badge.textContent = cart.reduce((s, i) => s + i.qty, 0);
+  if (!cart.length) { ci.innerHTML = '<p class="c-empty">Tu carrito está vacío</p>'; document.getElementById('ctot').style.display = 'none'; return; }
+  ci.innerHTML = cart.map((item, i) => `<div class="cl"><div><p class="cl-n">${item.name}</p><p style="font-size:0.72rem;color:var(--soft)">x${item.qty}</p></div><div style="display:flex;align-items:center"><span class="cl-p">$${(item.price * item.qty).toLocaleString('es-AR')}</span><button class="cl-rm" onclick="rmCart(${i})">✕</button></div></div>`).join('');
+  document.getElementById('ctot').style.display = 'flex';
+  document.getElementById('ctval').textContent = '$' + total.toLocaleString('es-AR');
+}
+function rmCart(i) { cart.splice(i, 1); renderCart(); }
+function toggleCart() {
+  document.getElementById('cd').classList.toggle('open');
+  document.getElementById('co').classList.toggle('open');
+}
+function checkout() {
+  if (!cart.length) { showToast('Tu carrito está vacío'); return; }
+  showToast('Redirigiendo a MercadoPago... 💳');
+  setTimeout(() => alert('En la versión final conectamos aquí con la API de MercadoPago. ¡Gracias por tu compra!'), 1000);
+}
+
+// ── TOAST ────────────────────────────────────────────────────
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._to); t._to = setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+// ── CONTACT FORM ─────────────────────────────────────────────
+function handleForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('sbtn');
+  btn.textContent = '✓ Mensaje enviado';
+  btn.style.background = '#2d6a4f'; btn.style.color = '#fff';
+  setTimeout(() => { btn.textContent = 'Enviar mensaje →'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3500);
+}
+
+// ── SCROLL REVEAL ────────────────────────────────────────────
+const ro = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vi'); ro.unobserve(e.target); } }); }, {threshold: 0.1});
+document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+</script>
+</body>
+</html>
