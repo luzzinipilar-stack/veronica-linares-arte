@@ -548,19 +548,25 @@ footer{background:#000;color:rgba(255,255,255,0.3);padding:3rem 5vw}
 // To use real images: replace each `src` with the actual file path
 // e.g. src: 'images/laviajera.jpg'  when hosting the site.
 const imgs = {
-  vero_mundial:   'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%231a2e5e" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🇦🇷</text></svg>',
-  laviajera:      'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450"><rect fill="%232c5f8a" width="400" height="450"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🏍️</text></svg>',
-  siesta:         'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460"><rect fill="%234a7c59" width="400" height="460"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🛋️</text></svg>',
-  rosario:        'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280"><rect fill="%23c75b39" width="400" height="280"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🍽️</text></svg>',
-  muestra:        'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><rect fill="%236a4c93" width="400" height="500"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🍷</text></svg>',
-  pintando:       'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450"><rect fill="%23c8a820" width="400" height="450"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🎨</text></svg>',
-  // merch
-  termo:          'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%232c5f8a" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🫙</text></svg>',
-  tazas:          'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%23c75b39" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">☕</text></svg>',
-  valija_vespa:   'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%234a90d9" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🧳</text></svg>',
-  valija_netflix: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%236a4c93" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">🧳</text></svg>',
-  cuaderno:       'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%23c8a820" width="400" height="400"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">📓</text></svg>',
-  vero_expo:      'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450"><rect fill="%232c5f8a" width="400" height="450"/><text x="50%" y="50%" font-size="60" text-anchor="middle" dy=".3em">👩🏽‍🎨</text></svg>',
+  // ── Cuadros / obras ──────────────────────────────────────
+  laviajera:      'images/vero-mundial-carrusel.jpg',   // La Viajera en Vespa (cuadro)
+  vero_mundial:   'images/vero-mundial.jpg',            // Vero con cuadro Argentina
+  rosario:        'images/tazas-merch.jpg',             // El Asado en Rosario
+  siesta:         'images/cuadro-moto.jpg',             // Siesta en el sillón
+  muestra:        'images/muestra-sunderland.jpg',      // Muestra Espirituosa flyer
+  pintando:       'images/vero-pintando.jpg',           // Vero pintando en el taller
+  // ── Merch ────────────────────────────────────────────────
+  termo:          'images/merch-vero.jpg',              // Termo La Viajera
+  tazas:          'images/modelo-carron-merch.jpg',     // Tazas con arte
+  valija_vespa:   'images/carryon-merch-moto.jpg',      // Valija La Viajera (Vespa)
+  valija_netflix: 'images/carryon-merch-netflix.jpg',   // Valija Netflix Night
+  cuaderno:       'images/termo.jpg',                   // Cuaderno + termo
+  vero_expo:      'images/vero-moto-muestra.jpg',       // Vero en expo con valijas
+  // ── Carrusel extra ───────────────────────────────────────
+  carrusel1:      'images/carrusel1.jpg',
+  carrusel2:      'images/Carrusel 2.jpeg',
+  carryon_merch:  'images/carryon-merch.jpg',
+  cuadro_antifaz: 'images/cuadro-antifaz.jpg',
 };
 
 // ── HERO MOSAIC ──────────────────────────────────────────────
@@ -578,12 +584,16 @@ document.getElementById('aboutImgWrap').innerHTML = `<img src="${imgs.pintando}"
 
 // ── CAROUSEL ─────────────────────────────────────────────────
 const carouselData = [
-  {img: imgs.laviajera,   title: 'La Viajera', meta: 'Acrílico · 90×100cm'},
-  {img: imgs.vero_mundial,title: 'La Caravana', meta: 'Óleo · 120×100cm'},
-  {img: imgs.rosario,     title: 'El Asado en Rosario', meta: 'Acrílico · 180×90cm'},
-  {img: imgs.siesta,      title: 'Siesta', meta: 'Acrílico · 80×80cm'},
-  {img: imgs.muestra,     title: 'Espirituosa', meta: 'Óleo · 70×70cm'},
-  {img: imgs.pintando,    title: 'La Jardinera', meta: 'Acrílico · 100×100cm'},
+  {img: imgs.laviajera,    title: 'La Viajera',          meta: 'Acrílico · 90×100cm'},
+  {img: imgs.vero_mundial, title: 'La Caravana',         meta: 'Óleo · 120×100cm'},
+  {img: imgs.siesta,       title: 'Siesta',              meta: 'Acrílico · 80×80cm'},
+  {img: imgs.muestra,      title: 'Muestra Espirituosa', meta: 'Óleo · 70×70cm'},
+  {img: imgs.pintando,     title: 'En el taller',        meta: 'Proceso creativo'},
+  {img: imgs.vero_expo,    title: 'La Viajera — Expo',   meta: 'Muestra itinerante'},
+  {img: imgs.carrusel1,    title: 'Serie Viaje',         meta: 'Acrílico · 80×80cm'},
+  {img: imgs.carrusel2,    title: 'Carry-on Art',        meta: 'Merch con arte'},
+  {img: imgs.carryon_merch,title: 'La Viajera — Valija', meta: 'Edición limitada'},
+  {img: imgs.cuadro_antifaz,title:'Cuadro Aeropuerto',   meta: 'Acrílico · 70×70cm'},
 ];
 const ct = document.getElementById('ctrack');
 [...carouselData, ...carouselData].forEach(d => {
@@ -592,15 +602,18 @@ const ct = document.getElementById('ctrack');
 
 // ── MASONRY GRID ─────────────────────────────────────────────
 const obras = [
-  {img: imgs.laviajera,    title:'La Viajera — Vespa', cat:'viaje', r:'1.1'},
-  {img: imgs.vero_mundial, title:'La Caravana del Mundial', cat:'argentina', r:'1.3'},
-  {img: imgs.siesta,       title:'Siesta en el sillón', cat:'cotidiano', r:'0.88'},
-  {img: imgs.rosario,      title:'El Asado en Rosario', cat:'personajes', r:'1.4'},
-  {img: imgs.muestra,      title:'Muestra Espirituosa', cat:'cotidiano', r:'0.9'},
-  {img: imgs.pintando,     title:'La Jardinera', cat:'personajes', r:'1.15'},
-  {img: imgs.vero_mundial, title:'Argentina Campeón', cat:'argentina', r:'0.82'},
-  {img: imgs.vero_expo,    title:'La Viajera — Expo', cat:'viaje', r:'1.1'},
-  {img: imgs.laviajera,    title:'A Donde Ir', cat:'viaje', r:'1.0'},
+  {img: imgs.laviajera,     title:'La Viajera — Vespa',     cat:'viaje',      r:'1.1'},
+  {img: imgs.vero_mundial,  title:'La Caravana del Mundial', cat:'argentina',  r:'1.0'},
+  {img: imgs.siesta,        title:'Siesta en el sillón',     cat:'cotidiano',  r:'0.88'},
+  {img: imgs.rosario,       title:'Tazas — Serie Viajera',   cat:'personajes', r:'1.0'},
+  {img: imgs.muestra,       title:'Muestra Espirituosa',     cat:'cotidiano',  r:'1.3'},
+  {img: imgs.pintando,      title:'En el taller',            cat:'personajes', r:'1.0'},
+  {img: imgs.vero_expo,     title:'La Viajera — Expo',       cat:'viaje',      r:'1.1'},
+  {img: imgs.carryon_merch, title:'Carry-on La Viajera',     cat:'viaje',      r:'1.4'},
+  {img: imgs.cuadro_antifaz,title:'Cuadro Aeropuerto',       cat:'viaje',      r:'1.2'},
+  {img: imgs.carrusel1,     title:'Serie Viaje',             cat:'viaje',      r:'0.9'},
+  {img: imgs.carrusel2,     title:'Valija Netflix Night',    cat:'cotidiano',  r:'1.15'},
+  {img: imgs.tazas,         title:'Modelo con carry-on',     cat:'personajes', r:'1.3'},
 ];
 const mg = document.getElementById('mg');
 obras.forEach(o => {
